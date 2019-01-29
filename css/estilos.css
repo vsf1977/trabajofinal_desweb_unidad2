@@ -1,0 +1,122 @@
+body
+{
+  background-color: #02010A;
+  margin: 0px;
+  font-family: Dancing Script;
+}
+
+.cabecera
+{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+
+.cabecera div
+{
+	box-sizing: border-box;
+  padding: 20px;
+  background-color: #5b7989;
+}
+
+.titulo
+{
+  color: white;
+  float: left;
+  border-radius: 10px 0px 0px 0px;
+  width: 50%;
+  font-size: 3em;
+  text-shadow: 2px 2px #02010a;
+}
+
+.enlaces
+{
+  float: right;
+  text-align: right;
+  border-radius: 0px 10px 0px 0px;
+  width: 50%;
+  font-size: 2em;
+}
+
+a
+{
+  color: white;
+  text-shadow: 2px 2px #02010a;
+}
+
+.pie
+{
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row;
+	flex-flow:row;
+  margin-top: 100%;
+  margin-bottom: 0%;
+}
+
+.pie div
+{
+	box-sizing: border-box;
+  padding: 20px;
+  background-color: #C6d5c5;
+}
+
+.pie div p
+{
+  font-size: 1.2em;
+}
+
+.pie div p img
+{
+  transform:scale(.8);
+  vertical-align: middle;
+}
+
+.contacto
+{
+  width:25%;
+  border-radius: 0px 0px 0px 10px;
+}
+
+.terminos, .redes
+{
+  width:25%;
+}
+
+.derechos
+{
+  width:25%;
+  border-radius: 0px 0px 10px 0px;
+}
+
+@media all and (max-width:900px)
+{
+    .titulo
+    {
+      width:100%;
+      text-align: center;
+      border-radius: 10px 10px 0px 0px;
+    }
+    .enlaces
+    {
+      width:100%;
+      text-align: center;
+      border-radius: 0px;
+    }
+    .pie
+    {
+    	-webkit-flex-flow:column;
+    	flex-flow:column;
+    }
+    .contacto, .terminos, .redes
+    {
+      width:100%;
+      border-radius: 0px;
+    }
+    .derechos
+    {
+      width:100%;
+      border-radius: 0px 0px 10px 10px;
+    }
+}
