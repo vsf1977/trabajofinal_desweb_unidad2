@@ -11,6 +11,8 @@ body
 	display: flex;
 	-webkit-flex-flow: row wrap;
 	flex-flow: row wrap;
+  animation-name: slidein;
+  animation-duration: 3s;
 }
 
 .cabecera div
@@ -45,13 +47,111 @@ a
   text-shadow: 2px 2px #02010a;
 }
 
+.imagen_central
+{
+  background-color: #82c3a6;
+  padding:20px 40px 20px 40px;
+  text-align: center;
+}
+
+.imagen_central img
+{
+  width: 100%;
+}
+
+.imagen_secundaria
+{
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row;
+  flex-flow: row;
+  width: 100%;
+  background-color: #d5c75f;
+}
+
+.imagen_secundaria div
+{
+  padding:20px 40px 20px 40px;
+}
+
+.imagen_secundaria div img
+{
+  width: 100%;
+}
+
+.imagen_secundaria div p
+{
+  font-size: 2em;
+  text-decoration: underline;
+  text-align: center;
+}
+
+img
+{
+  border-right: 2px solid #02010a;
+  border-bottom: 2px solid #02010a;
+}
+
+.imagen1, .imagen2
+{
+  transition: 2s;
+}
+
+.imagen1:hover
+{
+  transform: rotate(10deg);
+  border-right: 2px solid #82c3a6;
+  border-bottom: 2px solid #82c3a6;
+}
+
+.imagen2:hover
+{
+  transform: translate(20px,-5px);
+  border-right: 2px solid #82c3a6;
+  border-bottom: 2px solid #82c3a6;
+}
+
+.img_grid
+{
+  display: -webkit-grid;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  -webkit-grid-template-columns: auto auto auto;
+  width: 100%;
+  background-color: #d5c75f;
+}
+
+.img_grid div
+{
+  padding:30px;
+}
+
+.img_grid div img
+{
+  width: 100%;
+}
+
+.imagen1_grid
+{
+  filter:blur(10px);
+}
+
+.imagen2_grid, .imagen4_grid, .imagen6_grid
+{
+  filter:grayscale(100%);
+}
+
+.imagen3_grid
+{
+  filter:sepia(90%);
+}
+
 .pie
 {
   display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: row;
 	flex-flow:row;
-  margin-top: 100%;
   margin-bottom: 0%;
 }
 
@@ -64,7 +164,7 @@ a
 
 .pie div p
 {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 .pie div p img
@@ -104,11 +204,27 @@ a
       text-align: center;
       border-radius: 0px;
     }
+
+    .imagen_secundaria
+    {
+    	-webkit-flex-flow:column;
+    	flex-flow:column;
+    }
+
     .pie
     {
     	-webkit-flex-flow:column;
     	flex-flow:column;
     }
+
+    .img_grid
+    {
+      display: -webkit-flex;
+    	display: flex;
+    	-webkit-flex-flow:column;
+    	flex-flow:column;
+    }
+
     .contacto, .terminos, .redes
     {
       width:100%;
@@ -119,4 +235,17 @@ a
       width:100%;
       border-radius: 0px 0px 10px 10px;
     }
+}
+
+@keyframes slidein
+{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
 }
